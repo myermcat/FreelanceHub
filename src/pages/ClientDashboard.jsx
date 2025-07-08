@@ -24,12 +24,18 @@ export default function ClientDashboard() {
   const clientName = 'Acme Corp'; // Placeholder
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200 px-2">
-      <div className="w-full max-w-3xl">
-        <h2 className="text-2xl font-bold mb-8 text-indigo-700 text-center">Welcome, {clientName}!</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-400 via-purple-300 to-blue-100 font-sans px-2">
+      <div className="w-full max-w-3xl bg-white p-10 rounded-3xl shadow-2xl border border-indigo-100">
+        <div className="flex flex-col items-center mb-6">
+          <div className="bg-indigo-100 rounded-full p-4 mb-2 shadow">
+            <svg xmlns='http://www.w3.org/2000/svg' className='h-10 w-10 text-indigo-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M16 7a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V5a4 4 0 10-8 0v2m8 0a4 4 0 01-8 0m8 0v2a4 4 0 01-8 0V7' /></svg>
+          </div>
+          <h2 className="text-3xl font-extrabold text-indigo-700 tracking-tight text-center">Welcome, {clientName}!</h2>
+        </div>
+
         <div className="flex justify-center mb-10">
           <button
-            className="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition shadow"
+            className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-xl font-bold text-lg shadow-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200"
             onClick={() => navigate('/new-project')}
           >
             Post New Project

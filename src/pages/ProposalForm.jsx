@@ -29,9 +29,9 @@ export default function ProposalForm() {
 
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
-          <h2 className="text-2xl font-bold mb-4 text-indigo-700 text-center">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-400 via-purple-300 to-blue-100 font-sans">
+        <div className="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-lg border border-indigo-100">
+          <h2 className="text-3xl font-extrabold mb-4 text-indigo-700 text-center tracking-tight">
             {project ? `Submit Proposal for: ${project.title}` : 'Submit a New Proposal'}
           </h2>
           <form className="space-y-6 mt-4" onSubmit={handleSubmit}>
@@ -39,8 +39,8 @@ export default function ProposalForm() {
               <label className="block text-gray-700 mb-2 font-medium">Proposal Title</label>
               <input
                 type="text"
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                placeholder="Enter title"
+                className="w-full px-4 py-2 border border-indigo-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50 placeholder-gray-400 transition"
+                placeholder="Enter proposal title..."
                 value={title}
                 onChange={e => setTitle(e.target.value)}
                 required
@@ -49,9 +49,9 @@ export default function ProposalForm() {
             <div>
               <label className="block text-gray-700 mb-2 font-medium">Description</label>
               <textarea
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                className="w-full px-4 py-2 border border-indigo-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50 placeholder-gray-400 transition"
                 rows={4}
-                placeholder="Describe your proposal"
+                placeholder="Describe your proposal..."
                 value={description}
                 onChange={e => setDescription(e.target.value)}
                 required
@@ -61,7 +61,7 @@ export default function ProposalForm() {
               <label className="block text-gray-700 mb-2 font-medium">Category</label>
               <input
                 type="text"
-                className="w-full px-4 py-2 border rounded bg-gray-100 cursor-not-allowed text-gray-600"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-gray-100 cursor-not-allowed text-gray-600"
                 value={project ? project.category : ''}
                 disabled
                 readOnly
@@ -78,7 +78,7 @@ export default function ProposalForm() {
             </div>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition mt-2"
+              className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl font-bold text-lg shadow-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 mt-2"
             >
               Submit Proposal
             </button>

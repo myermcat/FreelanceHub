@@ -27,16 +27,16 @@ export default function ProjectProposals() {
   // For now, just show all mock proposals regardless of projectId
   const [expandedId, setExpandedId] = useState(null);
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200 px-2">
-      <div className="w-full max-w-2xl">
-        <h2 className="text-2xl font-bold mb-8 text-indigo-700 text-center">Proposals for Project</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-400 via-purple-300 to-blue-100 font-sans px-2">
+      <div className="w-full max-w-2xl bg-white p-10 rounded-3xl shadow-2xl border border-indigo-100">
+        <h2 className="text-3xl font-extrabold mb-8 text-indigo-700 text-center tracking-tight">Proposals for Project</h2>
         <div className="space-y-6">
           {mockProposals.map(proposal => {
             const isOpen = expandedId === proposal.id;
             return (
               <div
                 key={proposal.id}
-                className={`bg-white rounded-lg shadow border border-blue-50 hover:shadow-md transition cursor-pointer ${isOpen ? 'ring-2 ring-indigo-300' : ''}`}
+                className={`bg-indigo-50 rounded-2xl shadow-lg border border-indigo-100 hover:shadow-xl transition cursor-pointer ${isOpen ? 'ring-2 ring-indigo-300' : ''}`}
                 onClick={() => setExpandedId(isOpen ? null : proposal.id)}
               >
                 <div className="p-6 flex flex-col md:flex-row md:items-center md:justify-between">

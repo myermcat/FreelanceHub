@@ -11,19 +11,19 @@ export default function BrowseProjects() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
-        <h2 className="text-2xl font-bold mb-8 text-indigo-700 text-center">Browse Open Projects</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-400 via-purple-300 to-blue-100 font-sans">
+      <div className="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-2xl border border-indigo-100">
+        <h2 className="text-3xl font-extrabold mb-8 text-indigo-700 text-center tracking-tight">Browse Open Projects</h2>
         <div className="space-y-6">
           {fakeProjects.map(project => (
-            <div key={project.id} className="border rounded-lg p-6 flex flex-col md:flex-row md:items-center justify-between bg-gray-50 shadow-sm">
+            <div key={project.id} className="border border-indigo-100 rounded-2xl p-6 flex flex-col md:flex-row md:items-center justify-between bg-indigo-50 shadow-lg mb-2">
               <div>
-                <div className="text-lg font-semibold text-indigo-800">{project.title}</div>
-                <div className="text-sm text-gray-500 mb-2">Category: {project.category}</div>
+                <div className="text-xl font-bold text-indigo-800 mb-1">{project.title}</div>
+                <div className="text-xs text-purple-500 mb-2 uppercase tracking-wide">{project.category}</div>
                 <div className="text-gray-600 mb-2">{project.description}</div>
               </div>
               <button
-                className="mt-4 md:mt-0 bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition"
+                className="mt-4 md:mt-0 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-2 rounded-xl font-bold shadow-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200"
                 onClick={() => navigate(`/proposal-form/${project.id}`)}
               >
                 Submit Proposal

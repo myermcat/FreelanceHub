@@ -28,11 +28,11 @@ const sampleProposals = [
 
 export default function UserSubmissions() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200 px-2">
-      <div className="w-full max-w-2xl">
-        <h2 className="text-2xl font-bold mb-8 text-indigo-700 text-center">My Submitted Proposals</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-400 via-purple-300 to-blue-100 font-sans px-2">
+      <div className="w-full max-w-2xl bg-white p-10 rounded-3xl shadow-2xl border border-indigo-100">
+        <h2 className="text-3xl font-extrabold mb-8 text-indigo-700 text-center tracking-tight">My Submitted Proposals</h2>
         {sampleProposals.length === 0 ? (
-          <div className="bg-white rounded-lg shadow p-8 text-center text-gray-500">
+          <div className="bg-indigo-50 rounded-2xl shadow-lg p-8 text-center text-gray-500 border border-indigo-100">
             You haven’t submitted any proposals yet.
           </div>
         ) : (
@@ -40,7 +40,7 @@ export default function UserSubmissions() {
             {sampleProposals.map(proposal => (
               <div
                 key={proposal.id}
-                className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row md:items-center md:justify-between border border-blue-50 hover:shadow-md transition"
+                className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center md:justify-between border border-gray-100 hover:shadow-lg transition duration-200 ease-in-out"
               >
                 <div className="flex-1">
                   <div className="text-lg font-semibold text-indigo-800 mb-1">
